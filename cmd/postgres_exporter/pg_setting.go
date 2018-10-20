@@ -119,6 +119,8 @@ func (s *pgSetting) normaliseUnit() (val float64, unit string, err error) {
 		val *= 60 * 60 * 24
 	case "kB":
 		val *= math.Pow(2, 10)
+	case "B":
+		val *= math.Pow(2, 1)
 	case "MB":
 		val *= math.Pow(2, 20)
 	case "GB":
